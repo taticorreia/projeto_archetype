@@ -18,9 +18,9 @@ class ToTrustedTest(unittest.TestCase):
 
         spark = SparkSession.builder.getOrCreate()
 
-        fr_path_al = '../projeto/tests/locallake/raw/alunos.csv'
-        fr_path_disc = '../projeto/tests/locallake/raw/alunos_diciplina.csv'
-        to_path = '../projeto/tests/locallake/trusted/alunos_salvos.csv'
+        fr_path_al = '../projeto_archetype/tests/locallake/raw/alunos.csv'
+        fr_path_disc = '../projeto_archetype/tests/locallake/raw/alunos_diciplina.csv'
+        to_path = '../projeto_archetype/tests/locallake/trusted/alunos_salvos.csv'
         chamada = ToTrusted(fr_path_al,fr_path_disc,to_path)
         resultado = chamada.processa()
 
