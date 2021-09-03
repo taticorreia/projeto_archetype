@@ -1,11 +1,13 @@
 from pyspark.sql import SparkSession
+from src.commons.abstrata import Abstrata
 
-
-class ToTrusted:
+class ToTrusted(Abstrata):
     def __init__(self, fr_path_al,fr_path_disc,to_path):
-        self.fr_path_al = fr_path_al
-        self.fr_path_disc = fr_path_disc
-        self.to_path = to_path
+        super().__init__(fr_path_al,fr_path_disc,to_path)
+        print('instanciou')
+        # self.fr_path_al = fr_path_al
+        # self.fr_path_disc = fr_path_disc
+        # self.to_path = to_path
 
     def processa(self):
         spark = SparkSession.builder.getOrCreate()
@@ -23,11 +25,3 @@ class ToTrusted:
         # # # df.write(self.to_path)
         # print('deu certo')
         return 1
-
-## CSV Aluno, CSV de disciplina
-#
-# def function:
-#       for file in path:
-#             a = a[i]
-#               b = [i]
-#              a.merge(b)
